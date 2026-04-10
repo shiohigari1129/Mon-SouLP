@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon-Sou | 16タイプ肛門相診断＆相性チェック</title>
+    <meta name="description" content="古来の叡智と現代のパーソナリティ科学が融合。「Mon-Sou（肛門相）」からあなたの持って生まれた性格、健康、そして相性を紐解く次世代の診断サービス。">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Noto+Serif+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <!-- Header -->
+    <header class="glass-header">
+        <div class="logo">
+            <span class="logo-en">Mon-Sou</span>
+            <span class="logo-ja">肛門相診断</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Mon-Souとは？</a></li>
+                <li><a href="#diagnose">16タイプ診断</a></li>
+                <li><a href="#compatibility">相性占い</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="subtitle">運命は、見えない場所に刻まれている</span>
+                Mon-Sou<br><span class="title-ja">16タイプ肛門相診断</span>
+            </h1>
+            <p class="hero-desc">
+                東洋の深淵なる身体観と、最新のパーソナリティ心理学が融合。<br>
+                手相が人生の地図であるならば、Mon-Sou（肛門相）はあなたの本質を映す鏡です。<br>
+                グローバルスタンダードとなる新たな自己探求を、いまここで。
+            </p>
+            <div class="hero-buttons">
+                <a href="#diagnose" class="btn btn-primary"><span>無料で診断する</span></a>
+                <a href="#about" class="btn btn-secondary">より深く知る</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <div class="mystic-circle"></div>
+             <img src="Mon-Sou.jpeg" alt="Mon-Sou 公式キャラクター" class="hero-img">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title">What is Mon-Sou?<span>肛門相とは</span></h2>
+        <div class="features-grid">
+            <div class="feature-card glass-card">
+                <i class="fa-solid fa-dna feature-icon"></i>
+                <h3>16の魂の類型</h3>
+                <p>世界的な性格診断（16タイプ）のアルゴリズムをMon-Souに応用。相の形、シワの数、色調などからあなたの潜在意識と性格的特性を正確に導き出します。</p>
+            </div>
+            <div class="feature-card glass-card">
+                <i class="fa-solid fa-heart-pulse feature-icon"></i>
+                <h3>心身の健康バロメーター</h3>
+                <p>手相が健康状態を表すように、Mon-Souは消化器系や自律神経のバランスを反映します。あなたの現在のストレスレベルや休養の必要性を読み解きます。</p>
+            </div>
+            <div class="feature-card glass-card">
+                <i class="fa-solid fa-people-arrows feature-icon"></i>
+                <h3>究極の相性診断</h3>
+                <p>表面的な性格ではなく、本能的・根本的な相性を評価します。恋愛、ビジネス、友情。どのMon-Souタイプと最も波長が合うのかを解明します。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diagnosis Section -->
+    <section id="diagnose" class="section diagnosis-section">
+        <h2 class="section-title">Start Diagnosis<span>16タイプ診断をはじめる</span></h2>
+        
+        <div id="quiz-container" class="glass-card quiz-card">
+            <div id="intro-screen" class="quiz-screen active">
+                <i class="fa-solid fa-crystal-ball quiz-icon"></i>
+                <h3>あなたの相を導き出す4つの質問</h3>
+                <p>直感でお答えください。あなたの傾向から、全16タイプのうちどのMon-Sou（肛門相）に該当するかを診断します。</p>
+                <button id="start-btn" class="btn btn-primary">診断開始</button>
+            </div>
+
+            <div id="question-screen" class="quiz-screen">
+                <div class="progress-bar"><div class="progress" id="progress"></div></div>
+                <h3 id="question-text"></h3>
+                <div class="options-container" id="options-container">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+
+            <div id="result-screen" class="quiz-screen">
+                <div class="result-header">
+                    <span class="result-label">You are...</span>
+                    <h3 id="result-title" class="result-title"></h3>
+                    <p id="result-type-name" class="result-type-name"></p>
+                </div>
+                <div class="result-content">
+                    <p id="result-desc"></p>
+                    <div class="health-advice">
+                        <h4><i class="fa-solid fa-leaf"></i> 健康・ライフスタイル運</h4>
+                        <p id="result-health"></p>
+                    </div>
+                </div>
+                <button id="retake-btn" class="btn btn-secondary">もう一度診断する</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compatibility Section -->
+    <section id="compatibility" class="section compatibility-section">
+        <h2 class="section-title">Compatibility<span>Mon-Sou 相性占い</span></h2>
+        <div class="glass-card compatibility-card">
+            <p class="compatibility-desc">気になる相手のタイプとの相性をチェックしましょう。</p>
+            <div class="compatibility-selectors">
+                <div class="selector-group">
+                    <label>あなたのタイプ</label>
+                    <select id="my-type">
+                        <option value="">選択してください</option>
+                        <!-- Options injected by JS -->
+                    </select>
+                </div>
+                <div class="heart-icon"><i class="fa-solid fa-heart"></i></div>
+                <div class="selector-group">
+                    <label>お相手のタイプ</label>
+                    <select id="partner-type">
+                        <option value="">選択してください</option>
+                        <!-- Options injected by JS -->
+                    </select>
+                </div>
+            </div>
+            <button id="check-compa-btn" class="btn btn-primary" disabled>相性を占う</button>
+            <div id="compa-result" class="compa-result hidden">
+                <div class="compa-score-ring">
+                    <span id="compa-score"></span>%
+                </div>
+                <h4 id="compa-title"></h4>
+                <p id="compa-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Mon-Sou</div>
+            <p>※本サイトはジョークサイト・エンターテインメント目的であり、医学的・科学的根拠に基づくものではありません。</p>
+            <p>&copy; 2026 Mon-Sou Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+</body>
+</html>
